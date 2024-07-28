@@ -1,4 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-  
+
+.leaflet-control-zoom .leaflet-control-zoom-in,
+.leaflet-control-zoom .leaflet-control-zoom-out {
+  background-color: black !important;
+  color: white !important;
+}
+
+.leaflet-control-zoom .leaflet-control-zoom-in:hover,
+.leaflet-control-zoom .leaflet-control-zoom-out:hover {
+  background-color: #333 !important;
+  color: white !important;
+}

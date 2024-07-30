@@ -5,6 +5,7 @@ const DataContext = createContext()
 
 // eslint-disable-next-line react/prop-types
 export const DataProvider = ({ children }) => {
+  const apiKey = import.meta.env.VITE_GEO_IPIFY_API_KEY
   const [data, setData] = useState(null)
   const [query, setQuery] = useState('')
   const [history, setHistory] = useState([])
@@ -52,7 +53,7 @@ export const DataProvider = ({ children }) => {
     setLoading(true)
     setError({ state: false, label: '' })
     try {
-      const response = await fetch(`https://geo.ipify.org/api/v2/country,city?apiKey=at_aBJaavqy42nyEKSMnTtRKTACVh3PN&ipAddress=${query}`)
+      const response = await fetch(`https://geo.ipify.org/api/v2/country,city?apiKey=${apiKey}&ipAddress=${query}`)
 
       if (!response.ok) {
         throw new Error(`HTTP error! Status: ${response.status}`)

@@ -7,6 +7,7 @@ import DataContext from '@/context/DataContext'
 
 const LeafletMap = () => {
   const { data } = useContext(DataContext)
+  const apiKey = import.meta.env.VITE_MAP_API_KEY
 
   const customIcon = new L.Icon({
     iconUrl: blackPin,
@@ -33,7 +34,7 @@ const LeafletMap = () => {
   return (
     <MapContainer center={center} zoom={13} className='size-full h-screen z-10'>
       <TileLayer
-        url="https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png"
+        url={`https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png?api_key=${apiKey}`}
         minZoom={0}
         maxZoom={20}
         attribution='&copy <a href="https://www.stadiamaps.com/" target="_blank">Stadia Maps</a> &copy <a href="https://openmaptiles.org/" target="_blank">OpenMapTiles</a> &copy <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'

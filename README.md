@@ -1,8 +1,21 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# IP Tracker
 
-Currently, two official plugins are available:
+App para buscar direcciones IP, ver su información y ubicación aproximada en un mapa.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Demo
+
+https://ip-tracker-dusky.vercel.app/
+
+## Screenshots
+
+![App Screenshot](./public/screenshot.png)
+
+
+
+## Feedback
+
+Si tienes comentarios, sugerencias o has encontrado algún bug, por favor, abre un [Issue en GitHub](https://github.com/KevinPadi/IPTracker/issues).
+## Tech Stack
+
+**Client:** React, TailwindCSS, Shadcn
